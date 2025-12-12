@@ -19,7 +19,7 @@ const ExpenseSchema = new mongoose.Schema({
 
 // 1. Database Connection
 mongoose
-  .connect("mongodb+srv://nagumeenaudayappan23aid_db_user:meena5002@cluster0.iqa8w0g.mongodb.net/?appName=Cluster0")
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
 
